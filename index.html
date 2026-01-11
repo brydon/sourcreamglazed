@@ -432,6 +432,113 @@
             font-style: normal;
         }
 
+        /* Open Letter Section */
+        .letter-section {
+            background: var(--tims-cream);
+            padding: 80px 20px;
+            position: relative;
+        }
+
+        .letter-container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            padding: 60px;
+            box-shadow: 
+                0 2px 4px rgba(0,0,0,0.1),
+                0 8px 16px rgba(0,0,0,0.1);
+            position: relative;
+        }
+
+        .letter-container::before {
+            content: "";
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            right: 20px;
+            bottom: 20px;
+            border: 2px solid var(--tims-tan);
+            pointer-events: none;
+        }
+
+        .letter-seal {
+            width: 100px;
+            height: 100px;
+            background: var(--tims-red);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 30px;
+            border: 4px solid var(--tims-dark-brown);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+
+        .letter-seal span {
+            font-family: 'Archivo Black', sans-serif;
+            color: white;
+            font-size: 2.5rem;
+        }
+
+        .letter-heading {
+            text-align: center;
+            margin-bottom: 10px;
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 1.2rem;
+            letter-spacing: 4px;
+            color: var(--tims-tan);
+        }
+
+        .letter-recipient {
+            text-align: center;
+            font-family: 'Archivo Black', sans-serif;
+            font-size: clamp(1.8rem, 4vw, 2.5rem);
+            color: var(--tims-dark-brown);
+            margin-bottom: 30px;
+            line-height: 1.2;
+        }
+
+        .letter-body {
+            font-family: 'Source Serif 4', serif;
+            font-size: 1.15rem;
+            line-height: 1.9;
+            color: var(--tims-dark-brown);
+        }
+
+        .letter-body p {
+            margin-bottom: 20px;
+            text-indent: 2em;
+        }
+
+        .letter-body p:first-child {
+            text-indent: 0;
+        }
+
+        .letter-body .salutation {
+            text-indent: 0;
+            margin-top: 30px;
+            margin-bottom: 5px;
+        }
+
+        .letter-body .signature {
+            text-indent: 0;
+            font-style: italic;
+        }
+
+        .letter-highlight {
+            background: linear-gradient(180deg, transparent 50%, rgba(200, 16, 46, 0.15) 50%);
+        }
+
+        .letter-footer {
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid var(--tims-tan);
+            text-align: center;
+            font-family: 'Special Elite', monospace;
+            font-size: 0.9rem;
+            color: var(--tims-brown);
+        }
+
         /* Action Section */
         .action-section {
             background: 
@@ -683,6 +790,7 @@
             <span>Greenland situation pales in comparison</span>
             <span>Walnut Crunch veteran mobilizes for new campaign</span>
             <span>Sources: Menu boards being quietly updated nationwide</span>
+            <span>PM Carney yet to comment on donut crisis</span>
             <span>51st state talk irrelevant if we lose our donuts</span>
             <span>BREAKING: Unconfirmed reports suggest Sour Cream Glazed may be discontinued</span>
             <span>Tim Hortons corporate remains silent on donut fate</span>
@@ -691,6 +799,7 @@
             <span>Greenland situation pales in comparison</span>
             <span>Walnut Crunch veteran mobilizes for new campaign</span>
             <span>Sources: Menu boards being quietly updated nationwide</span>
+            <span>PM Carney yet to comment on donut crisis</span>
             <span>51st state talk irrelevant if we lose our donuts</span>
         </div>
     </div>
@@ -755,12 +864,12 @@
                 <div class="victory-badge">PROOF IT CAN BE DONE</div>
                 <h2 class="victory-title">THE WALNUT CRUNCH PRECEDENT</h2>
                 <p class="victory-story">
-                    In the early days of the first Trudeau government, another beloved donut faced extinction. The Walnut Crunch. 
-                    <strong>BringBackTheWalnutCrunch.ca</strong> launched. The campaign went semi-viral. 
-                    A question was asked on local news—directly to the future Prime Minister. 
+                    We have been down this road before. In 2011 the powers that be (wrongfully) removed the Walnut Crunch from the menu.
+                    As a concerned citizen, I could not let this stand. With a new liberal government around the corner, and a Canada more concerned with socks than donuts,
+                    <strong>BringBackTheWalnutCrunch.ca</strong> launched. 
                     The pressure mounted. <strong>Tim Hortons listened. The Walnut Crunch returned.</strong>
                     <br><br>
-                    History can repeat itself. Heroes can rise again.
+                    History can repeat itself. Heroes can rise again. But we must act now.
                 </p>
             </div>
         </section>
@@ -790,6 +899,26 @@
                         <p>An existential threat to humanity. We should definitely address this too. But imagine facing rising seas without your favourite donut.</p>
                     </div>
                 </div>
+            </div>
+        </section>
+
+        <!-- Open Letter to PM Carney -->
+        <section class="letter-section">
+            <div class="letter-container">
+                <div class="letter-seal"><span>🍁</span></div>
+                <p class="letter-heading">AN OPEN LETTER TO</p>
+                <h2 class="letter-recipient">THE RIGHT HONOURABLE<br>MARK CARNEY</h2>
+                <div class="letter-body">
+                    <p>Prime Minister Carney,</p>
+                    <p>You steadied the Bank of Canada through the 2008 financial crisis. You guided the Bank of England through Brexit. You have been called upon time and again when institutions falter and confidence wavers. <span class="letter-highlight">Canada calls upon you once more.</span></p>
+                    <p>The Sour Cream Glazed donut—a cornerstone of Canadian culture, a fixture in our Tim Hortons display cases since time immemorial—faces discontinuation. This is not merely a menu adjustment. This is an attack on our national character.</p>
+                    <p>You understand monetary policy. You understand inflation. Surely you understand that some things are <span class="letter-highlight">too important to be left to market forces alone.</span> The Sour Cream Glazed is a public good. It is infrastructure. It is, dare we say, a matter of national security.</p>
+                    <p>We are not asking for a bailout. We are asking for leadership. A word from the Prime Minister's Office. A photo op at a Tim Hortons. A firm but polite Canadian suggestion to corporate headquarters that perhaps this decision should be... reconsidered.</p>
+                    <p>You ran on protecting Canadian interests. <span class="letter-highlight">This is a Canadian interest.</span></p>
+                    <p class="salutation">Respectfully, and with great urgency,</p>
+                    <p class="signature">The Citizens of SaveTheSourCreamGlazed.ca</p>
+                </div>
+                <p class="letter-footer">cc: The Tim Hortons Board of Directors · Heritage Canada · Concerned Canadians Everywhere</p>
             </div>
         </section>
 
