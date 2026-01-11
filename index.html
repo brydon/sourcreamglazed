@@ -929,7 +929,7 @@
             <h2 class="action-title">TAKE ACTION NOW</h2>
             <p class="action-subtitle">Every signature. Every share. Every donut ordered.</p>
             <div class="action-buttons">
-                <button class="action-btn primary" onclick="alert('This feature will be active once the campaign officially launches. Your enthusiasm is noted and appreciated, patriot.');">SIGN THE PETITION</button>
+                <a href="#" id="petition-btn" class="action-btn primary" target="_blank">SIGN THE PETITION</a>
                 <a href="mailto:info@timhortons.com?subject=URGENT%3A%20Do%20Not%20Discontinue%20the%20Sour%20Cream%20Glazed&body=To%20Whom%20It%20May%20Concern%20at%20Tim%20Hortons%2C%0A%0AI%20am%20writing%20as%20a%20deeply%20concerned%20Canadian%20citizen%20regarding%20rumours%20that%20the%20Sour%20Cream%20Glazed%20donut%20may%20be%20discontinued.%0A%0AThis%20is%20not%20merely%20a%20menu%20item.%20This%20is%20a%20cornerstone%20of%20Canadian%20culture.%20Generations%20have%20been%20sustained%20by%20its%20simple%2C%20tangy%20perfection.%0A%0AI%20urge%20you%20to%20reconsider%20this%20decision.%20The%20Walnut%20Crunch%20was%20saved.%20The%20Sour%20Cream%20Glazed%20can%20be%20too.%0A%0AHistory%20is%20watching.%0A%0ASincerely%2C%0AA%20Concerned%20Patriot%0A%0A%23SaveTheSourCreamGlazed%0Ahttps%3A%2F%2Fsavethesourcreamglazed.ca" class="action-btn">CONTACT TIM HORTONS</a>
                 <a href="https://twitter.com/intent/tweet?text=%F0%9F%9A%A8%20NATIONAL%20CRISIS%20%F0%9F%9A%A8%0A%0ATim%20Hortons%20is%20reportedly%20discontinuing%20the%20Sour%20Cream%20Glazed%20donut.%0A%0AThis%20cannot%20stand.%20We%20saved%20the%20Walnut%20Crunch.%20We%20can%20save%20this.%0A%0AJoin%20the%20fight%3A%20savethesourcreamglazed.ca%0A%0A%23SaveTheSourCreamGlazed%20%23TimHortons%20%F0%9F%8D%A9%F0%9F%87%A8%F0%9F%87%A6&url=https%3A%2F%2Fsavethesourcreamglazed.ca" target="_blank" class="action-btn">SHARE THE CAUSE</a>
                 <a href="https://www.timhortons.ca/" target="_blank" class="action-btn">ORDER ONE TODAY</a>
@@ -968,6 +968,19 @@
         });
 
         observer.observe(document.querySelector('.days-counter'));
+
+        // Random petition selector - because we don't take ourselves too seriously
+        const veryImportantPetitions = [
+            'https://www.change.org/p/christian-moms-against-private-education-sell-montana-to-canada-for-1-trillion-to-eliminate-the-national-debt',
+            'https://www.change.org/p/donald-trump-make-shrek-the-national-bird',
+            'https://www.change.org/p/nintendo-nintendo-of-america-get-danny-devito-to-voice-the-english-version-of-detective-pikachu',
+            'https://www.change.org/p/dc-replace-amber-heard-with-danny-devito-in-aquaman',
+            'https://www.change.org/p/crocs-make-shrek-crocs-real',
+            'https://www.change.org/p/united-nations-make-shrek-emperor-of-the-universe'
+        ];
+        
+        const petitionBtn = document.getElementById('petition-btn');
+        petitionBtn.href = veryImportantPetitions[Math.floor(Math.random() * veryImportantPetitions.length)];
     </script>
 </body>
 </html>
