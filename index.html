@@ -990,16 +990,21 @@
 
         // Random petition selector - because we don't take ourselves too seriously
         const veryImportantPetitions = [
+            'https://www.change.org/p/change-canada-s-national-anthem-to-pump-up-the-jam',
+            'https://www.change.org/p/justin-trudeau-government-coverage-of-maple-syrup',
+            'https://www.change.org/p/justin-trudeau-rename-maple-syrup-to-maple-tree-juice',
+            'https://www.change.org/p/united-nations-development-program-rename-all-countries-in-the-continent-of-north-america-to-their-location-in-relation-to-canada-as-well-as-all-continents-and-bodies-of-the-milky-way-galaxy',
             'https://www.change.org/p/christian-moms-against-private-education-sell-montana-to-canada-for-1-trillion-to-eliminate-the-national-debt',
-            'https://www.change.org/p/donald-trump-make-shrek-the-national-bird',
-            'https://www.change.org/p/nintendo-nintendo-of-america-get-danny-devito-to-voice-the-english-version-of-detective-pikachu',
-            'https://www.change.org/p/dc-replace-amber-heard-with-danny-devito-in-aquaman',
-            'https://www.change.org/p/crocs-make-shrek-crocs-real',
-            'https://www.change.org/p/united-nations-make-shrek-emperor-of-the-universe'
+            'https://www.change.org/p/invite-nickelback-to-perform-canadian-anthem-at-world-series'
         ];
         
         const petitionBtn = document.getElementById('petition-btn');
-        petitionBtn.href = veryImportantPetitions[Math.floor(Math.random() * veryImportantPetitions.length)];
+        petitionBtn.addEventListener('click', function(e) {
+            e.preventDefault();
+            const randomPetition = veryImportantPetitions[Math.floor(Math.random() * veryImportantPetitions.length)];
+            window.open(randomPetition, '_blank');
+        });
+
     </script>
 </body>
 </html>
