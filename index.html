@@ -50,7 +50,6 @@
 
         .ticker-content {
             display: flex;
-            animation: ticker 10s linear infinite;
             white-space: nowrap;
             font-family: 'Special Elite', monospace;
             font-size: 14px;
@@ -64,11 +63,6 @@
 
         .ticker-content span::before {
             content: "⚠ ";
-        }
-
-        @keyframes ticker {
-            0% { transform: translateX(0); }
-            100% { transform: translateX(-50%); }
         }
 
         /* Main Content */
@@ -974,10 +968,29 @@
     </footer>
 
     <script>
-        // Animate the days counter on load
+        // Ticker animation - calculates actual width for seamless loop
+        (function initTicker() {
+            const ticker = document.querySelector('.ticker-content');
+            const items = [...ticker.children];
+            items.forEach(item => ticker.appendChild(item.cloneNode(true)));
+            
+            const halfWidth = ticker.scrollWidth / 2;
+            
+            const duration = halfWidth / 100;
+            
+            const style = document.createElement('style');
+            style.textContent = `
+                @keyframes ticker {
+                    0% { transform: translateX(0); }
+                    100% { transform: translateX(-${halfWidth}px); }
+                }
+            `;
+            document.head.appendChild(style);
+            ticker.style.animation = `ticker ${duration}s linear infinite`;
+        })();
+
         const daysCount = document.getElementById('days-count');
         
-        // Calculate days since the crisis began (Dec 15, 2025)
         const crisisStartDate = new Date('2025-12-15');
         const today = new Date();
         const targetDays = Math.floor((today - crisisStartDate) / (1000 * 60 * 60 * 24));
@@ -986,7 +999,6 @@
 
         function animateCounter() {
             if (currentDays < targetDays) {
-                // Speed up animation for larger numbers
                 const increment = Math.max(1, Math.floor(targetDays / 50));
                 currentDays = Math.min(currentDays + increment, targetDays);
                 daysCount.textContent = currentDays;
@@ -994,7 +1006,6 @@
             }
         }
 
-        // Start animation when section is in view
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
