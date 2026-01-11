@@ -946,12 +946,19 @@
     <script>
         // Animate the days counter on load
         const daysCount = document.getElementById('days-count');
-        const targetDays = 47;
+        
+        // Calculate days since the crisis began (Dec 15, 2025)
+        const crisisStartDate = new Date('2025-12-15');
+        const today = new Date();
+        const targetDays = Math.floor((today - crisisStartDate) / (1000 * 60 * 60 * 24));
+        
         let currentDays = 0;
 
         function animateCounter() {
             if (currentDays < targetDays) {
-                currentDays++;
+                // Speed up animation for larger numbers
+                const increment = Math.max(1, Math.floor(targetDays / 50));
+                currentDays = Math.min(currentDays + increment, targetDays);
                 daysCount.textContent = currentDays;
                 setTimeout(animateCounter, 30);
             }
