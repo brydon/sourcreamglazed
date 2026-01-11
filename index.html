@@ -427,7 +427,7 @@
             font-style: italic;
         }
 
-        .victory-story strong {
+        .victory-story strong, .victory-story strong a {
             color: var(--crisis-yellow);
             font-style: normal;
         }
@@ -604,6 +604,8 @@
             transition: all 0.3s ease;
             position: relative;
             overflow: hidden;
+            text-decoration: none;
+            display: inline-block;
         }
 
         .action-btn::before {
@@ -866,7 +868,7 @@
                 <p class="victory-story">
                     We have been down this road before. In 2011 the powers that be (wrongfully) removed the Walnut Crunch from the menu.
                     As a concerned citizen, I could not let this stand. With a new liberal government around the corner, and a Canada more concerned with socks than donuts,
-                    <strong>BringBackTheWalnutCrunch.ca</strong> launched. 
+                    <strong><a href="https://bringbackthewalnutcrunch.ca">BringBackTheWalnutCrunch.ca</a></strong> launched. 
                     The pressure mounted. <strong>Tim Hortons listened. The Walnut Crunch returned.</strong>
                     <br><br>
                     History can repeat itself. Heroes can rise again. But we must act now.
@@ -911,9 +913,9 @@
                 <div class="letter-body">
                     <p>Prime Minister Carney,</p>
                     <p>You steadied the Bank of Canada through the 2008 financial crisis. You guided the Bank of England through Brexit. You have been called upon time and again when institutions falter and confidence wavers. <span class="letter-highlight">Canada calls upon you once more.</span></p>
-                    <p>The Sour Cream Glazed donut—a cornerstone of Canadian culture, a fixture in our Tim Hortons display cases since time immemorial—faces discontinuation. This is not merely a menu adjustment. This is an attack on our national character.</p>
+                    <p>The Sour Cream Glazed donut—a cornerstone of Canadian culture, a fixture in our Tim Hortons display cases since time immemorial—faces discontinuation. This is more than just a menu adjustment, this is the degradation of a cornerstone of our national identity. This is an attack on our national character.</p>
                     <p>You understand monetary policy. You understand inflation. Surely you understand that some things are <span class="letter-highlight">too important to be left to market forces alone.</span> The Sour Cream Glazed is a public good. It is infrastructure. It is, dare we say, a matter of national security.</p>
-                    <p>We are not asking for a bailout. We are asking for leadership. A word from the Prime Minister's Office. A photo op at a Tim Hortons. A firm but polite Canadian suggestion to corporate headquarters that perhaps this decision should be... reconsidered.</p>
+                    <p>We are not asking for a bailout. We are asking for leadership. A word from the Prime Minister's Office. A photo op at a Tim Hortons. A firm but polite Canadian suggestion to corporate headquarters that perhaps this decision should be... reconsidered. And, heaven forbid, a deployment of the RCMP to Timmies #1 on Ottawa Street. We are not asking for much, just to halt the insepid decay of all that makes us Canadian.</p>
                     <p>You ran on protecting Canadian interests. <span class="letter-highlight">This is a Canadian interest.</span></p>
                     <p class="salutation">Respectfully, and with great urgency,</p>
                     <p class="signature">The Citizens of SaveTheSourCreamGlazed.ca</p>
@@ -927,10 +929,10 @@
             <h2 class="action-title">TAKE ACTION NOW</h2>
             <p class="action-subtitle">Every signature. Every share. Every donut ordered.</p>
             <div class="action-buttons">
-                <button class="action-btn primary">SIGN THE PETITION</button>
-                <button class="action-btn">CONTACT TIM HORTONS</button>
-                <button class="action-btn">SHARE THE CAUSE</button>
-                <button class="action-btn">ORDER ONE TODAY</button>
+                <button class="action-btn primary" onclick="alert('This feature will be active once the campaign officially launches. Your enthusiasm is noted and appreciated, patriot.');">SIGN THE PETITION</button>
+                <a href="mailto:info@timhortons.com?subject=URGENT%3A%20Do%20Not%20Discontinue%20the%20Sour%20Cream%20Glazed&body=To%20Whom%20It%20May%20Concern%20at%20Tim%20Hortons%2C%0A%0AI%20am%20writing%20as%20a%20deeply%20concerned%20Canadian%20citizen%20regarding%20rumours%20that%20the%20Sour%20Cream%20Glazed%20donut%20may%20be%20discontinued.%0A%0AThis%20is%20not%20merely%20a%20menu%20item.%20This%20is%20a%20cornerstone%20of%20Canadian%20culture.%20Generations%20have%20been%20sustained%20by%20its%20simple%2C%20tangy%20perfection.%0A%0AI%20urge%20you%20to%20reconsider%20this%20decision.%20The%20Walnut%20Crunch%20was%20saved.%20The%20Sour%20Cream%20Glazed%20can%20be%20too.%0A%0AHistory%20is%20watching.%0A%0ASincerely%2C%0AA%20Concerned%20Patriot%0A%0A%23SaveTheSourCreamGlazed%0Ahttps%3A%2F%2Fsavethesourcreamglazed.ca" class="action-btn">CONTACT TIM HORTONS</a>
+                <a href="https://twitter.com/intent/tweet?text=%F0%9F%9A%A8%20NATIONAL%20CRISIS%20%F0%9F%9A%A8%0A%0ATim%20Hortons%20is%20reportedly%20discontinuing%20the%20Sour%20Cream%20Glazed%20donut.%0A%0AThis%20cannot%20stand.%20We%20saved%20the%20Walnut%20Crunch.%20We%20can%20save%20this.%0A%0AJoin%20the%20fight%3A%20savethesourcreamglazed.ca%0A%0A%23SaveTheSourCreamGlazed%20%23TimHortons%20%F0%9F%8D%A9%F0%9F%87%A8%F0%9F%87%A6&url=https%3A%2F%2Fsavethesourcreamglazed.ca" target="_blank" class="action-btn">SHARE THE CAUSE</a>
+                <a href="https://www.timhortons.ca/" target="_blank" class="action-btn">ORDER ONE TODAY</a>
             </div>
         </section>
     </main>
@@ -938,7 +940,7 @@
     <footer>
         <div class="footer-logo">SAVETHESOURCREAMGLAZED.CA</div>
         <p class="footer-tagline">Because some things are worth fighting for.</p>
-        <p class="footer-copy">© 2025 · From the people who brought you BringBackTheWalnutCrunch.ca · 🍩</p>
+        <p class="footer-copy">© 2025 · From the moron who brought you BringBackTheWalnutCrunch.ca · 🍩</p>
     </footer>
 
     <script>
@@ -966,13 +968,6 @@
         });
 
         observer.observe(document.querySelector('.days-counter'));
-
-        // Add click handlers to buttons (for demo)
-        document.querySelectorAll('.action-btn').forEach(btn => {
-            btn.addEventListener('click', () => {
-                alert('This feature will be active once the campaign officially launches. Your enthusiasm is noted and appreciated, patriot.');
-            });
-        });
     </script>
 </body>
 </html>
