@@ -154,6 +154,21 @@
             background: rgba(0,0,0,0.3);
         }
 
+        .hero-donut {
+            position: absolute;
+            bottom: 30px;
+            right: 30px;
+            width: clamp(150px, 20vw, 280px);
+            z-index: 2;
+            filter: drop-shadow(0 10px 30px rgba(0,0,0,0.5));
+            animation: float 4s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0) rotate(0deg); }
+            50% { transform: translateY(-15px) rotate(3deg); }
+        }
+
         /* Threat Level */
         .threat-section {
             background: var(--tims-cream);
@@ -829,6 +844,7 @@
                 SOUR CREAM<br>GLAZED
             </h1>
             <p class="hero-subtitle">A Canadian institution under threat. Again.</p>
+            <img src="sgc.png" alt="The Sour Cream Glazed Donut" class="hero-donut">
         </section>
 
         <!-- Threat Level -->
